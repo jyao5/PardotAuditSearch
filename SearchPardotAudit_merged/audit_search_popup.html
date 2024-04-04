@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Search</h2>
+		<p>prospect Id: <input id="prospect_id" type="text" name="p_id " value="waiting for prospect id" readonly/></p>
+		<p>search for: <input id="searchtext" type="text" name="search_audit"/></p>
+		<p>limit to: <input id="resultlimitnum" type="text" name="limit_result" value="50"/> matched results</p>
+		<button id="bttn_search">search</button>
+		<button id="downloadSearch">
+				Export to CSV
+		</button>
+		<div id="feedback">Ready</div>
+		<div>
+			<h3>Result</h3>
+			<table id="result_table" style="border: 1px solid black;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid black;">page</th>
+						<th style="border: 1px solid black;">field</th>
+						<th style="border: 1px solid black;">type</th>
+						<th style="border: 1px solid black;">value</th>
+						<th style="border: 1px solid black;">source</th>
+						<th style="border: 1px solid black;">datetime</th>
+					</tr>
+				</thead>
+				<tbody id="result_table_body">
+				</tbody>
+			</table>
+		</div>
+		<br/>
+		<h2 id="pg_brwsr">Page Browser <a href="#prospect_id">(back to search)</a></h2>
+		<div>
+			<p>Current Page: 
+				<input id="current_page" type="text" name="c_p " value="1"/> 
+				<button id="goto">GO</button>
+			</p>
+			<p>Total Page: <input id="total_page" type="text" name="t_p " value="waiting for data pull" readonly/></p>
+			<p>Page Size: <input id="page_size" type="text" name="p_s " value="waiting for data pull" readonly/> (change page size in lightning)</p>
+		</div>
+		<div id = "pageloader">
+		</div>
+		<script type="text/javascript"  src="popup.js"></script>
+	</body>
+</html>
