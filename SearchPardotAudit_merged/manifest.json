@@ -1,6 +1,6 @@
 {
   "name": "Pardot Audit Search",
-  "manifest_version": 4,
+  "manifest_version": 3,
   "version": "1.4",
   "description": "auxiliary tool for searching pardot audit page",
   
