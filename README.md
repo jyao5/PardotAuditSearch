@@ -13,6 +13,6 @@ How does it work: The JS script crawls a configurable range of audit pages, pars
 
 
 Release note:
-2024-07-08: enhance launch/search experience
+2024-07-08: enhancement - better launch/search experience
 2023-07-03: bugfix - incorrect ending status when not searching from first page
 2023-06-27 : enhancement - export search result to CSV
