@@ -3,13 +3,23 @@ const embeddedPardotUrl = "https://embedded.pardot.force.com";
 document.getElementById("goto").addEventListener("click", loadPage);
 document.getElementById("bttn_search").addEventListener("click", search);
 
+document.getElementById("searchtext").addEventListener("keydown", 
+	function(event){
+		if (event.key === "Enter") {
+			// Cancel the default action, if needed
+			event.preventDefault();
+			search()
+		}
+	}
+);
+
 document.getElementById("downloadSearch").addEventListener("click", download_table_as_csv);
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	document.getElementById("prospect_id").value = message;
 	loadPage();
-	alert("the searcher is up")
+	// alert("the searcher is up")
 });
 
 let resultlimit = 50
@@ -66,7 +76,7 @@ function loadPage() {
 			ps = document1.getElementById("vaupageSize").querySelector("option[selected='selected']").innerHTML.replace(',', '');		
 			document.getElementById("page_size").value = ps;
 			
-			window.location.href = "#pg_brwsr";
+			//window.location.href = "#pg_brwsr";
 			
 		}
 	};

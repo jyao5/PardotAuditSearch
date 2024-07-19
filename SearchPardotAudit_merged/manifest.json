@@ -1,8 +1,8 @@
 {
   "name": "Pardot Audit Search",
-  "manifest_version": 3,
-  "version": "1.3",
-  "description": "enhancement for searching pardot audit page",
+  "manifest_version": 4,
+  "version": "1.4",
+  "description": "auxiliary tool for searching pardot audit page",
   
   "icons": {
 	  "16": "images/icon-16.png"

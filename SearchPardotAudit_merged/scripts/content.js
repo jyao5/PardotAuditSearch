@@ -21,7 +21,15 @@ let field = document.createElement("input");
 field.setAttribute("id", "searchtext");
 field.setAttribute("type", "text");
 field.setAttribute("name", "search_audit");
+field.onkeydown = (event) => {
+	if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault();
+		returnCookie()
+	}
+};
 div.appendChild(field);
+field.focus();
 
 div.appendChild(document.createElement("br"));
 div.appendChild(document.createTextNode("limit to "));

@@ -38,13 +38,13 @@ chrome.action.onClicked.addListener(
 						chrome.tabs.get(tab.id, function(tab1){
 						   if(tab1.status == "complete"){
 							   chrome.runtime.sendMessage(extId, prospect_id.toString());
-							   chrome.notifications.create({
-										type: 'basic',
-										iconUrl: 'images/icon-16.png',
-										title: 'Search Pardot Audit Launched',
-										message: prospect_id.toString() + " passed to extension script",
-										priority: 1
-							   });
+							//    chrome.notifications.create({
+							// 			type: 'basic',
+							// 			iconUrl: 'images/icon-16.png',
+							// 			title: 'Search Pardot Audit Launched',
+							// 			message: prospect_id.toString() + " passed to extension script",
+							// 			priority: 1
+							//    });
 							   clearInterval(intervalId);  
 						   }
 						})
